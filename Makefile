@@ -1,4 +1,4 @@
-DESTDIR?=/
+DESTDIR?=/usr/local
 SHELL = /bin/sh
 CC?=gcc
 CDEBUGFLAGS= -g -O2
@@ -9,9 +9,9 @@ INSTALLDATA = /usr/bin/install -c -m 644
 
 srcdir = .
 prefix = $(DESTDIR)
-bindir = $(prefix)/usr/bin
-docdir = $(prefix)/usr/share/doc
-mandir = $(prefix)/usr/share/man
+bindir = $(prefix)/bin
+docdir = $(prefix)/share/doc
+mandir = $(prefix)/share/man
 
 OBJ=functions.o dbus.o dbus-session.o configfile.o lightum.o xbacklight.o
 BIN=lightum
