@@ -1,0 +1,14 @@
+[Unit]
+Description=A backlight daemon for MacBook Pro
+After=syslog.target
+After=sysinit.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/lightum -f
+ExecReload=/usr/bin/kill -HUP $MAINPID
+PIDFile=/var/run/lightum.pid
+Restart=always
+
+[Install]
+WantedBy=sysinit.target
